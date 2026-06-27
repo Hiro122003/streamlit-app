@@ -1,11 +1,11 @@
 import streamlit as st
 import matplotlib.pyplot as plt
-import matplotlib
 import seaborn as sns
 from utils.data_loader import load_sales_data
 
-# 日本語フォントの設定（文字化け防止）
-matplotlib.rcParams["font.family"] = "MS Gothic"
+# フォント設定（英語表示）
+plt.rcParams['font.sans-serif'] = ['DejaVu Sans']
+plt.rcParams['axes.unicode_minus'] = False
 
 # ページタイトル
 st.title("時系列分析")
@@ -31,9 +31,9 @@ monthly_sales["Amount"] = monthly_sales["Amount"] / 10000
 
 fig, ax = plt.subplots()
 ax.plot(monthly_sales["Transaction_Date"], monthly_sales["Amount"], marker="o")
-ax.set_title("月別売上推移")
-ax.set_xlabel("月")
-ax.set_ylabel("売上金額（万円）")
+ax.set_title("Monthly Sales")
+ax.set_xlabel("Month")
+ax.set_ylabel("Sales (10k JPY)")
 ax.set_ylim(120, 150)
 ax.tick_params(axis="x", rotation=45)
 plt.tight_layout()
@@ -45,16 +45,16 @@ st.subheader("曜日別取引件数")
 
 # 曜日番号（0=月〜6=日）を抽出してグループ集計
 sales_df["weekday"] = sales_df["Transaction_Date"].dt.dayofweek
-weekday_count = sales_df.groupby("weekday").size().reset_index(name="取引件数")
+weekday_count = sales_df.groupby("weekday").size().reset_index(name="Transactions")
 
 # 曜日ラベル（月〜日の順）
-weekday_labels = ["月", "火", "水", "木", "金", "土", "日"]
-weekday_count["曜日"] = weekday_count["weekday"].map(lambda x: weekday_labels[x])
+weekday_labels = ["Mon", "Tue", "Wed", "Thu", "Fri", "Sat", "Sun"]
+weekday_count["Weekday"] = weekday_count["weekday"].map(lambda x: weekday_labels[x])
 
 fig, ax = plt.subplots()
-sns.barplot(data=weekday_count, x="曜日", y="取引件数", order=weekday_labels, ax=ax)
-ax.set_title("曜日別取引件数")
-ax.set_xlabel("曜日")
-ax.set_ylabel("取引件数（件）")
+sns.barplot(data=weekday_count, x="Weekday", y="Transactions", order=weekday_labels, ax=ax)
+ax.set_title("Transactions by Weekday")
+ax.set_xlabel("Weekday")
+ax.set_ylabel("Transactions")
 plt.tight_layout()
 st.pyplot(fig)

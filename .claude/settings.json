@@ -22,7 +22,9 @@
       "mcp__playwright__browser_take_screenshot",
       "PowerShell(New-Item -ItemType Directory -Path \"c:\\\\Users\\\\hiroy\\\\Desktop\\\\streamlit-app\\\\pages\")",
       "mcp__playwright__browser_console_messages",
-      "PowerShell(Stop-Process -Id 24164 -Force -ErrorAction SilentlyContinue; Start-Sleep -Seconds 1; $logFile = \"C:\\\\Users\\\\hiroy\\\\AppData\\\\Local\\\\Temp\\\\streamlit_log.txt\"; Clear-Content $logFile -ErrorAction SilentlyContinue; $proc = Start-Process -FilePath \"c:\\\\Users\\\\hiroy\\\\Desktop\\\\streamlit-app\\\\.venv\\\\Scripts\\\\streamlit.exe\" -ArgumentList \"run\", \"app.py\", \"--server.headless\", \"true\" -WorkingDirectory \"c:\\\\Users\\\\hiroy\\\\Desktop\\\\streamlit-app\" -RedirectStandardOutput $logFile -RedirectStandardError \"$logFile.err\" -WindowStyle Hidden -PassThru; $proc.Id)"
+      "PowerShell(Stop-Process -Id 24164 -Force -ErrorAction SilentlyContinue; Start-Sleep -Seconds 1; $logFile = \"C:\\\\Users\\\\hiroy\\\\AppData\\\\Local\\\\Temp\\\\streamlit_log.txt\"; Clear-Content $logFile -ErrorAction SilentlyContinue; $proc = Start-Process -FilePath \"c:\\\\Users\\\\hiroy\\\\Desktop\\\\streamlit-app\\\\.venv\\\\Scripts\\\\streamlit.exe\" -ArgumentList \"run\", \"app.py\", \"--server.headless\", \"true\" -WorkingDirectory \"c:\\\\Users\\\\hiroy\\\\Desktop\\\\streamlit-app\" -RedirectStandardOutput $logFile -RedirectStandardError \"$logFile.err\" -WindowStyle Hidden -PassThru; $proc.Id)",
+      "PowerShell(& \"c:\\\\Users\\\\hiroy\\\\Desktop\\\\streamlit-app\\\\.venv\\\\Scripts\\\\pip.exe\" install japanize-matplotlib)",
+      "PowerShell(& \"c:\\\\Users\\\\hiroy\\\\Desktop\\\\streamlit-app\\\\.venv\\\\Scripts\\\\pip.exe\" show japanize-matplotlib)"
     ]
   }
 }

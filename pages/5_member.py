@@ -1,11 +1,11 @@
 import streamlit as st
 import matplotlib.pyplot as plt
-import matplotlib
 import seaborn as sns
 from utils.data_loader import load_merged_data, load_member_data
 
-# 日本語フォントの設定（文字化け防止）
-matplotlib.rcParams["font.family"] = "MS Gothic"
+# フォント設定（英語表示）
+plt.rcParams['font.sans-serif'] = ['DejaVu Sans']
+plt.rcParams['axes.unicode_minus'] = False
 
 # ページタイトル
 st.title("会員分析")
@@ -23,9 +23,9 @@ gender_avg = merged_df.groupby("Gender")["Amount"].mean().reset_index()
 
 fig, ax = plt.subplots()
 sns.barplot(data=gender_avg, x="Gender", y="Amount", ax=ax)
-ax.set_title("性別×平均購買額")
-ax.set_xlabel("性別")
-ax.set_ylabel("平均購買額（円）")
+ax.set_title("Avg Amount by Gender")
+ax.set_xlabel("Gender")
+ax.set_ylabel("Avg Amount (JPY)")
 plt.tight_layout()
 st.pyplot(fig)
 
@@ -38,9 +38,9 @@ age_avg = merged_df.groupby("age_group", observed=True)["Amount"].mean().reset_i
 
 fig, ax = plt.subplots()
 sns.barplot(data=age_avg, x="age_group", y="Amount", ax=ax)
-ax.set_title("年代別×平均購買額")
-ax.set_xlabel("年代")
-ax.set_ylabel("平均購買額（円）")
+ax.set_title("Avg Amount by Age Group")
+ax.set_xlabel("Age Group")
+ax.set_ylabel("Avg Amount (JPY)")
 plt.tight_layout()
 st.pyplot(fig)
 
@@ -50,9 +50,9 @@ st.subheader("年齢分布")
 
 fig, ax = plt.subplots()
 sns.histplot(data=member_df, x="Age", bins=20, ax=ax)
-ax.set_title("年齢分布")
-ax.set_xlabel("年齢（歳）")
-ax.set_ylabel("人数（人）")
+ax.set_title("Age Distribution")
+ax.set_xlabel("Age")
+ax.set_ylabel("Count")
 plt.tight_layout()
 st.pyplot(fig)
 
@@ -62,8 +62,8 @@ st.subheader("購買金額 × 購買数量")
 
 fig, ax = plt.subplots()
 sns.scatterplot(data=merged_df, x="Quantity", y="Amount", hue="Gender", ax=ax)
-ax.set_title("購買金額 × 購買数量（性別色分け）")
-ax.set_xlabel("購買数量（個）")
-ax.set_ylabel("購買金額（円）")
+ax.set_title("Amount vs Quantity by Gender")
+ax.set_xlabel("Quantity")
+ax.set_ylabel("Amount (JPY)")
 plt.tight_layout()
 st.pyplot(fig)
