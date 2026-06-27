@@ -1,0 +1,28 @@
+{
+  "permissions": {
+    "allow": [
+      "PowerShell(claude mcp list)",
+      "PowerShell(python -m venv .venv)",
+      "PowerShell(& \"c:\\\\Users\\\\hiroy\\\\Desktop\\\\streamlit-app\\\\.venv\\\\Scripts\\\\pip.exe\" install -r \"c:\\\\Users\\\\hiroy\\\\Desktop\\\\streamlit-app\\\\requirements.txt\")",
+      "PowerShell(& \"c:\\\\Users\\\\hiroy\\\\Desktop\\\\streamlit-app\\\\.venv\\\\Scripts\\\\pip.exe\" list)",
+      "PowerShell(New-Item -ItemType Directory -Path \"c:\\\\Users\\\\hiroy\\\\Desktop\\\\streamlit-app\\\\data\")",
+      "PowerShell(New-Item -ItemType Directory -Path \"c:\\\\Users\\\\hiroy\\\\Desktop\\\\streamlit-app\\\\utils\")",
+      "Skill(run)",
+      "Skill(run:*)",
+      "PowerShell(Start-Process -FilePath \"c:\\\\Users\\\\hiroy\\\\Desktop\\\\streamlit-app\\\\.venv\\\\Scripts\\\\streamlit.exe\" -ArgumentList \"run\", \"app.py\" -WorkingDirectory \"c:\\\\Users\\\\hiroy\\\\Desktop\\\\streamlit-app\" -WindowStyle Hidden -PassThru)",
+      "PowerShell(Invoke-WebRequest -Uri \"http://localhost:8501\" -UseBasicParsing -TimeoutSec 10)",
+      "PowerShell(Invoke-WebRequest -Uri \"http://localhost:8501\" -UseBasicParsing -TimeoutSec 15)",
+      "PowerShell(Get-Process -Id 25548 -ErrorAction SilentlyContinue)",
+      "PowerShell(netstat -ano)",
+      "PowerShell(Stop-Process -Id 25548 -Force -ErrorAction SilentlyContinue)",
+      "PowerShell($logFile = \"C:\\\\Users\\\\hiroy\\\\AppData\\\\Local\\\\Temp\\\\streamlit_log.txt\"; Start-Process -FilePath \"c:\\\\Users\\\\hiroy\\\\Desktop\\\\streamlit-app\\\\.venv\\\\Scripts\\\\streamlit.exe\" -ArgumentList \"run\", \"app.py\", \"--server.headless\", \"true\" -WorkingDirectory \"c:\\\\Users\\\\hiroy\\\\Desktop\\\\streamlit-app\" -RedirectStandardOutput $logFile -RedirectStandardError \"$logFile.err\" -WindowStyle Hidden -PassThru | Select-Object -ExpandProperty Id)",
+      "Read(//c/Users/hiroy/AppData/Local/Temp/**)",
+      "mcp__playwright__browser_navigate",
+      "mcp__playwright__browser_wait_for",
+      "mcp__playwright__browser_take_screenshot",
+      "PowerShell(New-Item -ItemType Directory -Path \"c:\\\\Users\\\\hiroy\\\\Desktop\\\\streamlit-app\\\\pages\")",
+      "mcp__playwright__browser_console_messages",
+      "PowerShell(Stop-Process -Id 24164 -Force -ErrorAction SilentlyContinue; Start-Sleep -Seconds 1; $logFile = \"C:\\\\Users\\\\hiroy\\\\AppData\\\\Local\\\\Temp\\\\streamlit_log.txt\"; Clear-Content $logFile -ErrorAction SilentlyContinue; $proc = Start-Process -FilePath \"c:\\\\Users\\\\hiroy\\\\Desktop\\\\streamlit-app\\\\.venv\\\\Scripts\\\\streamlit.exe\" -ArgumentList \"run\", \"app.py\", \"--server.headless\", \"true\" -WorkingDirectory \"c:\\\\Users\\\\hiroy\\\\Desktop\\\\streamlit-app\" -RedirectStandardOutput $logFile -RedirectStandardError \"$logFile.err\" -WindowStyle Hidden -PassThru; $proc.Id)"
+    ]
+  }
+}

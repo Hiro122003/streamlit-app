@@ -1,0 +1,48 @@
+- generic [ref=e2]:
+  - generic [ref=e15]:
+    - heading "ナビゲーション" [level=2] [ref=e16]
+    - paragraph [ref=e17]: 以下のページから分析内容を選択してください。
+    - list [ref=e18]:
+      - listitem [ref=e19]:
+        - strong [ref=e20]: データ概要
+        - text: ：件数・カラム・型・欠損値の確認
+      - listitem [ref=e21]:
+        - strong [ref=e22]: KPIサマリー
+        - text: ：売上・取引件数などの主要指標
+      - listitem [ref=e23]:
+        - strong [ref=e24]: 時系列分析
+        - text: ：月別・曜日別の売上推移
+      - listitem [ref=e25]:
+        - strong [ref=e26]: 店舗・商品分析
+        - text: ：売上Top10の確認
+      - listitem [ref=e27]:
+        - strong [ref=e28]: 会員分析
+        - text: ：性別・年代別の購買傾向
+  - generic [ref=e3]:
+    - banner [ref=e31]:
+      - generic [ref=e34]:
+        - button "Deploy" [ref=e36] [cursor=pointer]:
+          - generic [ref=e38]: Deploy
+        - button "Main menu" [ref=e40] [cursor=pointer]:
+          - img [ref=e41]
+    - generic [ref=e44]:
+      - heading "売上データ分析アプリ" [level=1] [ref=e49]:
+        - text: 売上データ分析アプリ
+        - generic [ref=e50]:
+          - link "Link to heading":
+            - /url: "#d207836d"
+            - img
+      - generic [ref=e54]:
+        - paragraph [ref=e55]: このアプリはCSV形式の売上データと会員データを読み込み、 集計・可視化を行うダッシュボードです。
+        - paragraph [ref=e56]: 左のサイドバーからページを選択して各種分析をご覧ください。
+      - status [ref=e59]:
+        - generic [ref=e62]:
+          - paragraph [ref=e63]:
+            - strong [ref=e64]: 使用データ
+          - list [ref=e65]:
+            - listitem [ref=e66]:
+              - strong [ref=e67]: Sales_Data.csv
+              - text: ：取引履歴データ（1,000件）。取引日時・会員ID・商品ID・店舗ID・数量・金額を含む。
+            - listitem [ref=e68]:
+              - strong [ref=e69]: Member_Data.csv
+              - text: ：会員情報データ（300件）。性別・年齢・登録日数を含む。

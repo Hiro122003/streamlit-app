@@ -1,0 +1,17 @@
+プロジェクトルートに .gitignore を作成してください。
+
+以下の内容で作成してください：
+
+# 仮想環境
+.venv/
+
+# Pythonキャッシュ
+__pycache__/
+*.pyc
+
+# 環境変数ファイル
+.env
+
+# OS生成ファイル
+.DS_Store
+Thumbs.db

@@ -1,0 +1,58 @@
+- generic [ref=e2]:
+  - generic [ref=e7]:
+    - list [ref=e10]:
+      - listitem [ref=e11]:
+        - link "app" [ref=e13] [cursor=pointer]:
+          - /url: http://localhost:8501/
+          - paragraph [ref=e16]: app
+      - listitem [ref=e17]:
+        - link "overview" [ref=e19] [cursor=pointer]:
+          - /url: http://localhost:8501/overview
+          - paragraph [ref=e22]: overview
+    - generic [ref=e30]:
+      - heading "ナビゲーション" [level=2] [ref=e31]
+      - paragraph [ref=e32]: 以下のページから分析内容を選択してください。
+      - list [ref=e33]:
+        - listitem [ref=e34]:
+          - strong [ref=e35]: データ概要
+          - text: ：件数・カラム・型・欠損値の確認
+        - listitem [ref=e36]:
+          - strong [ref=e37]: KPIサマリー
+          - text: ：売上・取引件数などの主要指標
+        - listitem [ref=e38]:
+          - strong [ref=e39]: 時系列分析
+          - text: ：月別・曜日別の売上推移
+        - listitem [ref=e40]:
+          - strong [ref=e41]: 店舗・商品分析
+          - text: ：売上Top10の確認
+        - listitem [ref=e42]:
+          - strong [ref=e43]: 会員分析
+          - text: ：性別・年代別の購買傾向
+  - generic [ref=e3]:
+    - banner [ref=e46]:
+      - generic [ref=e49]:
+        - button "Deploy" [ref=e51] [cursor=pointer]:
+          - generic [ref=e53]: Deploy
+        - button "Main menu" [ref=e55] [cursor=pointer]:
+          - img [ref=e56]
+    - generic [ref=e59]:
+      - heading "売上データ分析アプリ" [level=1] [ref=e64]:
+        - text: 売上データ分析アプリ
+        - generic [ref=e65]:
+          - link "Link to heading":
+            - /url: "#d207836d"
+            - img
+      - generic [ref=e69]:
+        - paragraph [ref=e70]: このアプリはCSV形式の売上データと会員データを読み込み、 集計・可視化を行うダッシュボードです。
+        - paragraph [ref=e71]: 左のサイドバーからページを選択して各種分析をご覧ください。
+      - status [ref=e74]:
+        - generic [ref=e77]:
+          - paragraph [ref=e78]:
+            - strong [ref=e79]: 使用データ
+          - list [ref=e80]:
+            - listitem [ref=e81]:
+              - strong [ref=e82]: Sales_Data.csv
+              - text: ：取引履歴データ（1,000件）。取引日時・会員ID・商品ID・店舗ID・数量・金額を含む。
+            - listitem [ref=e83]:
+              - strong [ref=e84]: Member_Data.csv
+              - text: ：会員情報データ（300件）。性別・年齢・登録日数を含む。
